@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mn-cloak:
+    image: cloak
+    container_name: mn-cloak
+    build:
+      context: .
+    ports:
+      - 12788:12788/tcp
+    volumes:
+      - $PWD/.cloakcoin:/root/.CloakCoin
